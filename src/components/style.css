@@ -1,0 +1,160 @@
+/* Navigation bar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgb(200, 73, 109);
+    color: white;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    z-index: 1050;
+  }
+  .sidebar.show {
+    left: 0;
+  }
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar-body ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar-body{
+    max-height: 100%;
+    max-width: 400px;
+  }
+  .sidebar-body .nav-link {
+    padding: 10px;
+    display: block;
+    color: white;
+  }
+  .sidebar-body .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+
+/* Popup Overlay - Centered */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 20px; 
+}
+
+/* Popup Content - Responsive Centering */
+.popup-content {
+  background: white;
+  padding: 20px;
+  max-width: 300px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Login Button */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Sign Up Link */
+.signup-text {
+  margin-top: 10px;
+}
+
+/* Open Login Button */
+.login-btn {
+  padding: 10px 15px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 95%;
+    max-width: 280px; 
+    padding: 15px;
+  }
+  .submit-btn {
+    font-size: 14px; 
+    padding: 8px;
+  }
+  .close-btn {
+    font-size: 20px; 
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
